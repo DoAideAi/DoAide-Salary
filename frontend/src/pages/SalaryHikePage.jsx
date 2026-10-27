@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { calculateSalaryHike, formatCurrency } from '../utils/taxCalculator';
 import ShareButtons from '../components/ShareButtons';
-import SEO from '../components/SEO';
 
 export default function SalaryHikePage() {
   const [currentCTC, setCurrentCTC] = useState('');
@@ -23,19 +22,6 @@ export default function SalaryHikePage() {
 
   return (
     <div className="page">
-      <SEO
-        title="Salary Hike Calculator"
-        description="Calculate your real take-home increase after a salary hike. See how much of your CTC hike actually reaches your bank account after tax, PF, and deductions."
-        path="/hike"
-        schema={{
-          '@context': 'https://schema.org',
-          '@type': 'WebApplication',
-          name: 'Salary Hike Calculator',
-          url: 'https://salary.doaide.com/hike',
-          description: 'Calculate your real in-hand salary increase after a hike. CTC vs take-home comparison.',
-          applicationCategory: 'FinanceApplication',
-        }}
-      />
       <h1 className="page-title">Salary Hike <span className="accent-text">Calculator</span></h1>
       <p className="page-subtitle">See how much of your CTC hike actually reaches your bank account</p>
 

@@ -1,25 +1,8 @@
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
 
 export default function LandingPage() {
   return (
     <>
-      <SEO
-        path="/"
-        description="Free CTC to take-home salary calculator for Indian professionals. Compare old vs new tax regime FY 2026-27, calculate HRA, salary hike impact, and compare job offers."
-        schema={{
-          '@context': 'https://schema.org',
-          '@type': 'WebSite',
-          name: 'SalaryDecode',
-          url: 'https://salary.doaide.com',
-          description: 'Free CTC to take-home salary calculator for Indian professionals',
-          potentialAction: {
-            '@type': 'SearchAction',
-            target: 'https://salary.doaide.com/calculator?ctc={search_term_string}',
-            'query-input': 'required name=search_term_string',
-          },
-        }}
-      />
       <section className="hero">
         <div className="hero-badge">Updated for FY 2026-27 Tax Slabs</div>
         <h1>Calculate Your <span className="accent-text">In-Hand Salary</span> from CTC in Seconds</h1>

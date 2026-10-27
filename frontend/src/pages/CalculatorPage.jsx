@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { calculateFullBreakdown, formatCurrency, PROFESSIONAL_TAX_BY_STATE } from '../utils/taxCalculator';
 import ShareButtons from '../components/ShareButtons';
-import SEO from '../components/SEO';
 
 const stateOptions = Object.entries(PROFESSIONAL_TAX_BY_STATE)
   .sort((a, b) => a[1].name.localeCompare(b[1].name));
@@ -37,21 +36,6 @@ export default function CalculatorPage() {
 
   return (
     <div className="page">
-      <SEO
-        title="CTC to In-Hand Salary Calculator FY 2026-27"
-        description="Calculate your take-home salary from CTC for FY 2026-27. Full breakdown of basic, HRA, PF, gratuity, income tax with surcharge under both old and new regimes."
-        path="/calculator"
-        schema={{
-          '@context': 'https://schema.org',
-          '@type': 'WebApplication',
-          name: 'CTC to Take-Home Salary Calculator FY 2026-27',
-          url: 'https://salary.doaide.com/calculator',
-          description: 'Free CTC to take-home salary calculator with full salary breakdown for Indian professionals. Updated for FY 2026-27.',
-          applicationCategory: 'FinanceApplication',
-          operatingSystem: 'Any',
-          offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
-        }}
-      />
       <h1 className="page-title">CTC to In-Hand <span className="accent-text">Salary Calculator</span></h1>
       <p className="page-subtitle">Enter your CTC to see your complete salary breakdown with both tax regimes (FY 2026-27)</p>
 
